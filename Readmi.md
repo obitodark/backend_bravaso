@@ -58,3 +58,16 @@ Modalidades de pago
 Para la creacion de modelos se diseño una digrama de entidad relacion
 
 ![ERP](flows/diagrama/Main.jpg "Registro")
+
+```
+backend :https://github.com/obitodark/backend_bravaso
+frondend:https://github.com/obitodark/frond_end_bravaso
+vercel :https://frondendbravaso.vercel.app/
+swagger :https://frozen-tor-02595.herokuapp.com/swagger-ui
+
+integranteS:
+
+-Willians Ccallo
+-Fredy de la Cruz
+-Jose Velarde
+```
