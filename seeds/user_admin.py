@@ -6,7 +6,7 @@ class UserAdminSeeder(Seeder):
     def run(self):
         users = [
             {
-                'name': 'Usuario',
+                'name': 'Admin',
                 'last_name': 'Administrador',
                 'username': 'admin',
                 'password': '123456',

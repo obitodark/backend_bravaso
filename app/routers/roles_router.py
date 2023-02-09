@@ -15,7 +15,7 @@ request_schema = RolesRequestSchema(role_ns)
 
 
 @role_ns.route('')
-@role_ns.doc(security='Bearer')
+# @role_ns.doc(security='Bearer')
 class Roles(Resource):
     @jwt_required()
     def get(self):
