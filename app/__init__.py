@@ -27,7 +27,8 @@ api = Api(
     version='0.0.1',
     description='Endpoints de nuestro boilerplate',
     authorizations=authorizations,
-    doc='/swagger-ui'
+    # doc='/swagger-ui'
+    doc='/'
 )
 
 db = SQLAlchemy(app)
