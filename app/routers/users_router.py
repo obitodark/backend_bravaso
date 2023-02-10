@@ -15,7 +15,7 @@ request_schema = UsersRequestSchema(user_ns)
 
 
 @user_ns.route('')
-@user_ns.doc(security='Bearer')
+# @user_ns.doc(security='Bearer')
 class Users(Resource):
     # @jwt_required()
     # @user_ns.expect(request_schema.all())
@@ -70,7 +70,7 @@ class ValidateEmail(Resource):
         return controller.validateEmail(email)
 
 @user_ns.route('/<int:id>')
-@user_ns.doc(security='Bearer')
+# @user_ns.doc(security='Bearer')
 class UserById(Resource):
     @jwt_required()
     def get(self, id):
@@ -82,7 +82,7 @@ class UserById(Resource):
 
 
     @jwt_required()
-    @user_ns.doc(security='Bearer')
+    # @user_ns.doc(security='Bearer')
     @user_ns.expect(request_schema.update(), validate=True)
     def put(self, id):
         ''' Actualizar un usuario por el ID '''
@@ -102,7 +102,7 @@ class UserById(Resource):
     
 
     @jwt_required()
-    @user_ns.doc(security='Bearer')
+    # @user_ns.doc(security='Bearer')
     def delete(self, id):
         ''' Deshabilitar un usuario por el ID '''
         controller = UsersController()

@@ -23,13 +23,14 @@ class DevelopmentConfig(BaseConfig):
 
 class ProductionConfig(BaseConfig):
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = getenv('DATABASE_URL').replace(
-        'postgres', 'postgresql', 1
-    )
-    # SQLALCHEMY_DATABASE_URI = getenv('DATABASE_URL')
+    # SQLALCHEMY_DATABASE_URI = getenv('DATABASE_URL').replace(
+    #     'postgres', 'postgresql', 1
+    # )
+    SQLALCHEMY_DATABASE_URI = getenv('DATABASE_URL')
   
-
+# SQLALCHEMY_DATABASE_URI=f"postgresql://{getenv('PGUSER')}:{getenv('PGPASSWORD')}@{getenv('PGHOST')}:{getenv('PGPORT')}/{getenv('PGDATABASE')}"
 config_env = {
     'development': DevelopmentConfig,
     'production': ProductionConfig
 }
+# postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}
